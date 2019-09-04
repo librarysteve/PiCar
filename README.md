@@ -9,7 +9,7 @@ Example code and instructions for creating a remote control robot friend, using 
   * [Blynklib Python3 module](https://github.com/blynkkk/lib-python)
   
 ##  Wiring 
-
+<img src="https://github.com/librarysteve/PiCar/blob/master/Annotated_Small.png"></img>
 ## Adding and configuring buttons in the Blynk mobile app
 
 ## Test The Connection

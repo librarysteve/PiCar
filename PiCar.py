@@ -1,3 +1,7 @@
+# PiCar Script
+# This is intended for use with a guide located here:
+# <ADD URL>
+# Author: Stephen Garrison
 from adafruit_crickit import crickit
 import blynklib
 

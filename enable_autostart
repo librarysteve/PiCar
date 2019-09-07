@@ -1,0 +1,31 @@
+#!/bin/bash
+
+user=$(whoami)
+
+enable_autostart() {
+	echo "Enable autostart for /home/pi/picar.py ?"
+	read -p "[y/n]:" ans
+	if [[ $ans == 'y' ]]; then
+		cp ./picar.service /etc/systemd/system/
+		systemctl start picar.service
+		systemctl enable picar.service
+		clear
+		echo "the script /home/pi/picar.py will now start on boot"
+	else
+		exit
+	fi
+}
+
+if [[ $1 == '-h' ]] || [[ $1 == '--help' ]]; then
+        echo "Enables automatic start of /home/pi/picar.py"
+		echo "must run as root"
+else
+        exit
+fi
+
+if [[ user == 'root' ]]; then
+	enable_autostart
+else
+	echo "Myst be root to enable autostart"
+	echo "Try: sudo ./enable_autostart.sh"
+fi
